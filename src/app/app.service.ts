@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-  public clientId = 'cd6e70772310fb43'
+  public clientId = environment.clientId
 
   public redirectUri = 'http://localhost:4200/';
 
@@ -18,7 +19,7 @@ export class AppService {
     let params = new URLSearchParams();
     params.append('grant_type', 'authorization_code');
     params.append('client_id', this.clientId);
-    params.append('client_secret', 'a7cd0d737c8913f0f8157c93439f2ada6d5e752a');
+    params.append('client_secret', environment.clientSecret);
     params.append('redirect_uri', this.redirectUri);
     params.append('code', code);
 
