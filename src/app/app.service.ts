@@ -8,7 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class AppService {
 
-  public clientId = '1d23d4aa82bd09fa'
+  public clientId = 'cd6e70772310fb43'
 
   public redirectUri = 'http://localhost:4200/';
 
@@ -18,7 +18,7 @@ export class AppService {
     let params = new URLSearchParams();
     params.append('grant_type', 'authorization_code');
     params.append('client_id', this.clientId);
-    params.append('client_secret', '2a2e74ff9fe028791bb68a53fb1cf5473c7d2273');
+    params.append('client_secret', 'a7cd0d737c8913f0f8157c93439f2ada6d5e752a');
     params.append('redirect_uri', this.redirectUri);
     params.append('code', code);
 
